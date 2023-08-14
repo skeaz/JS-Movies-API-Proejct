@@ -11,7 +11,7 @@ body {
   align-items: center;
   padding: 10px;
 }
-.navbar-brand img{
+.navbar-brand img {
   color: white;
   width: 100px;
   text-decoration: none;
@@ -21,6 +21,7 @@ body {
   display: flex;
   gap: 20px;
   margin: 0;
+  align-items: center;
 }
 .navbar-links a {
   color: white;
@@ -43,6 +44,7 @@ h1 {
   display: flex;
   overflow-x: scroll;
   gap: 10px;
+  padding: 20px;
 }
 .card-img-top1 {
   width: 220px;
@@ -61,8 +63,76 @@ h1 {
   background: #333;
   border-radius: 5px;
 }
-#nextprivios{
+#nextprivios {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.card-img-top1:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-body1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nameAndRelease {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.nameAndRelease h6 {
+  width: fit-content;
+  height: fit-content;
+  background-color: #ffc107;
+  padding: 2px;
+  border-radius: 35%;
+}
+.voteAverage {
+  display: flex;
+
+}
+.dropbtn {
+  background-color: rgba(51, 51, 51,0.2);
+  border: none;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+.withbutton{
+  display: flex;
+  align-items: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.bi-caret-down-fill{
+  color: white;
+}
+
