@@ -11,7 +11,7 @@
     />
   </head>
   <body>
-    <div class="navbar">
+    <div class="navbar" id="HOME">
       <a class="navbar-brand" href="#"><img src="/mainImg/logo" alt="" /></a>
       <ul class="navbar-links">
         <li><a href="/main.html">Home</a></li>
@@ -25,14 +25,27 @@
           </div>
         </li>
         <li><a href="/actor.html">Actor</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="/About.html" target="_blank">About</a></li>
         <li><a href="#bookmarked">Bookmarked</a></li>
+      </ul>
+    </div>
+    <!-- ////////// -->
+    <div class="navbar1" id="navbar1">
+      <ul class="navbar-links2" class="active" href="javascript:void(0)">
+        <li><a href="#HOME" href="javascript:void(0)" id="HOME1">HOME</a></li>
+        <li><a href="#Popular" href="javascript:void(0)">Popular</a></li>
+        <li><a href="#Top Rated" href="javascript:void(0)">Top Rated</a></li>
+        <li><a href="#Trending" href="javascript:void(0)">Trending</a></li>
+        <li>
+          <a href="#Now Playing" href="javascript:void(0)">Now Playing</a>
+        </li>
+        <!-- Add more links as needed -->
       </ul>
     </div>
     <!-- ////////// -->
     <div class="container">
       <div id="nextprivios">
-        <h1>Popular</h1>
+        <h1 id="Popular">Popular</h1>
         <div>
           <i class="bi bi-arrow-bar-left" id="leftButtonPopular"></i>
           <i class="bi bi-arrow-bar-right" id="rightButtonPopular"></i>
@@ -43,7 +56,7 @@
     <!-- ////////// -->
     <div class="container">
       <div id="nextprivios">
-        <h1>Top Rated</h1>
+        <h1 id="Top Rated">Top Rated</h1>
         <div>
           <i class="bi bi-arrow-bar-left" id="leftButtonTop"></i>
           <i class="bi bi-arrow-bar-right" id="rightButtonTop"></i>
@@ -54,7 +67,7 @@
     <!-- ////////// -->
     <div class="container">
       <div id="nextprivios">
-        <h1>Trending</h1>
+        <h1 id="Trending">Trending</h1>
         <div>
           <i class="bi bi-arrow-bar-left" id="leftButtonTrending"></i>
           <i class="bi bi-arrow-bar-right" id="rightButtonTrending"></i>
@@ -65,7 +78,7 @@
     <!-- ////////// -->
     <div class="container">
       <div id="nextprivios">
-        <h1>Now Playing</h1>
+        <h1 id="Now Playing">Now Playing</h1>
         <div>
           <i class="bi bi-arrow-bar-left" id="leftButtonTrending"></i>
           <i class="bi bi-arrow-bar-right" id="rightButtonTrending"></i>
@@ -73,6 +86,49 @@
       </div>
       <div id="holeOfNowPlaying"></div>
     </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content">
+          <div class="col-md-4">
+            <h3>Main Pages</h3>
+            <ul class="footer-links">
+              <li><a href="/main.html">Home</a></li>
+              <li><a href="/actor.html">Actor</a></li>
+              <li><a href="/About.html" target="_blank">About</a></li>
+              <li><a href="#bookmarked">Bookmarked</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Contact</h3>
+            <p>Email: shaheey33@gmail.com</p>
+            <p>Phone: +964 7810538782</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Social Media</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.facebook.com/s8eaz/" target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/husseinshaheed/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/s8eaz/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="main.js" type="module"></script>
   <script
