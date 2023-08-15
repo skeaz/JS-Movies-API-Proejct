@@ -1,11 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+
   background-color: #f4f4f4;
+  font-family: "Caesar Dressing", Courier, monospace;
+  line-height: 1.42857143;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .navbar {
-  background-color: #333;
+  background-color: rgb(54, 39, 9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,11 +47,10 @@ h1 {
 }
 #holeOfPopular,
 #holeOfTopRated,
-#holeOfTrending {
+#holeOfTrending,
+#holeOfNowPlaying {
   display: flex;
   overflow-x: scroll;
-  gap: 10px;
-  padding: 20px;
 }
 .card-img-top1 {
   width: 220px;
@@ -53,13 +59,18 @@ h1 {
 }
 #holeOfPopular::-webkit-scrollbar,
 #holeOfTopRated::-webkit-scrollbar,
-#holeOfTrending::-webkit-scrollbar {
+#holeOfTrending::-webkit-scrollbar,
+#holeOfNowPlaying::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+#holeOfNowPlaying::-webkit-scrollbar-thumb:hover {
+  background-color: green;
+}
 #holeOfPopular::-webkit-scrollbar-thumb,
 #holeOfTrending::-webkit-scrollbar-thumb,
-#holeOfTopRated::-webkit-scrollbar-thumb {
+#holeOfTopRated::-webkit-scrollbar-thumb,
+#holeOfNowPlaying::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 5px;
 }
@@ -71,6 +82,9 @@ h1 {
 .card-img-top1:hover {
   transform: scale(1.1);
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
 .card-body1 {
@@ -78,25 +92,51 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
-.nameAndRelease {
-  width: 100%;
+.card1 {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  margin: 10px;
   padding: 10px;
+  background-color: white;
 }
-.nameAndRelease h6 {
-  width: fit-content;
-  height: fit-content;
-  background-color: #ffc107;
-  padding: 2px;
-  border-radius: 35%;
+.nameAndRelease {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  margin: 10px;
+  width: 220px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.nameAndRelease:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(120deg, #ffed4b 60%, #fdcd3b 60%);
+}
+
+.nameAndRelease card-title1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
 }
 .voteAverage {
-  display: flex;
-
+  background-color: #ffc107;
+  border-radius: 10px;
+  padding: 5px;
+  display: inline;
+  text-align: center;
 }
 .dropbtn {
-  background-color: rgba(51, 51, 51,0.2);
+  font-family: "Courier New", Courier, monospace;
+
+  background-color: rgba(51, 51, 51, 0.2);
   border: none;
   color: white;
   padding: 16px;
@@ -107,7 +147,7 @@ h1 {
 .dropdown {
   position: relative;
 }
-.withbutton{
+.withbutton {
   display: flex;
   align-items: center;
 }
@@ -116,7 +156,7 @@ h1 {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -127,12 +167,60 @@ h1 {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.bi-caret-down-fill{
+.bi-caret-down-fill {
   color: white;
 }
+#holeOfGenre,
+#holeOfActor,
+#holeOfActor2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+#holeOfActor img,
+#holeOfActor2 img {
+  width: 235px;
+  height: 235px;
+}
+.navbar-links2 {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}
 
+.navbar-links2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.navbar-links2 a:hover {
+  color: #ffc107;
+}
+
+.navbar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  margin: 10px;
+  padding: 10px;
+}
