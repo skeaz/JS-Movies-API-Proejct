@@ -37,7 +37,7 @@ async function displayMoviesList(container, fetchDataFunction) {
     if (movie.profile_path) {
       movieImg.src = imgURL;
     } else {
-      movieImg.src = `https://fakeimg.pl/470x470?text=${movie.original_name}`;
+      movieImg.src = `https://placehold.co/800?text=${movie.original_name}&font=playfair`;
     }
     movieImg.alt = movie.original_name;
     movieImg.title = movie.original_name;

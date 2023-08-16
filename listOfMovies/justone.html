@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
   </head>
   <body>
     <div class="navbar" id="HOME">
@@ -35,45 +33,45 @@
     <div class="navbar1" id="navbar1">
       <ul class="navbar-links2" class="active" href="javascript:void(0)">
         <li><a href="#HOME" href="javascript:void(0)" id="HOME1">HOME</a></li>
-        <li><a href="#Popular" href="javascript:void(0)">Popular</a></li>
-        <li><a href="#Top Rated" href="javascript:void(0)">Top Rated</a></li>
-        <li><a href="#Trending" href="javascript:void(0)">Trending</a></li>
+        <li><a href="#new=Popular" href="javascript:void(0)" id="Popular1">Popular</a></li>
+        <li><a href="#new=Top Rated" href="javascript:void(0)" id="Top Rated1">Top Rated</a></li>
+        <li><a href="#Trending" href="javascript:void(0)" id="Trending1">Trending</a></li>
         <li>
-          <a href="#Now Playing" href="javascript:void(0)">Now Playing</a>
+          <a href="#Now Playing" href="javascript:void(0)" id="Now Playing1">Now Playing</a>
         </li>
         <!-- Add more links as needed -->
       </ul>
     </div>
     <!-- ////////// -->
-    <div class="container">
+    <div class="container" id="Popular">
       <div id="nextprivios">
-        <a href="#"><h1 id="Popular">Popular</h1></a>
-        
+        <a href="#"><h1 >Popular</h1></a>
+       
       </div>
       <div id="holeOfPopular"></div>
     </div>
     <!-- ////////// -->
-    <div class="container">
+    <div class="container" id="Top Rated">
       <div id="nextprivios">
-        <a href="#"> <h1 id="Top Rated">Top Rated</h1> </a>
+        <a href="#"> <h1 >Top Rated</h1> </a>
        
       </div>
       <div id="holeOfTopRated"></div>
     </div>
     <!-- ////////// -->
-    <div class="container">
+    <div class="container" id="Trending">
       <div id="nextprivios">
-        <a href="#"><h1 id="Trending">Trending</h1></a>
+        <a href="#"><h1 >Trending</h1></a>
         
       
       </div>
       <div id="holeOfTrending"></div>
     </div>
     <!-- ////////// -->
-    <div class="container">
+    <div class="container" id="Now Playing">
       <div id="nextprivios">
-        <a href="#"><h1 id="Now Playing">Now Playing</h1></a>
-       
+        <a href="#"><h1 >Now Playing</h1></a>
+        
       </div>
       <div id="holeOfNowPlaying"></div>
     </div>
@@ -121,8 +119,11 @@
       </div>
     </footer>
   </body>
-  <script src="main.js" type="module"></script>
-  <script src="./onscroll.js"></script>
+  <script src="/listOfMovies/justone.js" type="module"></script>
+  <!-- <script src="/main.js" type="module"></script> -->
+  <script src="../Genrejs.js" type="module"></script>
+  <script src="../onscroll.js"></script>
+
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

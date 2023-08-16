@@ -5,19 +5,21 @@ export async function fetchVideos(movieId) {
       `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=964229305065dd1ee3856990531a8f15`
     );
     const data = await response.json();
+    console.log(data);
     return data.results;
   } catch (error) {
     console.log(error);
     return [];
   }
 }
-
+fetchVideos(569094)
 export async function getPopularMovies() {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=964229305065dd1ee3856990531a8f15&language=en-US&page=1`
     );
     const data = await response.json();
+    console.log(data.results);
     return data.results;
   } catch (error) {
     console.log(error);

@@ -16,6 +16,48 @@ export async function displayMoviesList(container, fetchDataFunction) {
     }
     movieImg.alt = movie.title;
     movieImg.title = movie.original_title;
+    //////////
+    movieImg.addEventListener("click", async (event) => {
+      event.stopPropagation(); // Prevent the click event from reaching document.body
+    
+      const popoverContent = document.createElement("div");
+      const movieId = await fetchVideos(movie.id);
+      const youtubeVideoId = movieId[0].key;
+      popoverContent.classList.add("popover-content");
+    
+      // Create an iframe to embed the YouTube video
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${youtubeVideoId}`;
+      iframe.width = "420";
+      iframe.height = "315";
+      iframe.frameborder = "0";
+      iframe.allowfullscreen = true; // Set the attribute correctly
+      iframe.classList.add("embed-responsive-item");
+      popoverContent.appendChild(iframe);
+    
+      // Use Bootstrap's popover to display the content
+      $(movieImg).popover({
+        content: popoverContent,
+        html: true,
+        title: movie.title,
+        placement: "top",
+        trigger: "manual", // Manual trigger to control when popover opens
+      });
+    
+      // Show the popover
+      $(movieImg).popover("show");
+    
+      // Close the popover when clicking outside
+      const popoverId = $(movieImg).attr("aria-describedby");
+      const popover = $(`#${popoverId}`);
+      $(document.body).on("click", (event) => {
+        if (!popover.is(event.target) && popover.has(event.target).length === 0) {
+          $(movieImg).popover("hide");
+        }
+      });
+    });
+    
+    ////////
     const cardBody = document.createElement("div");
     const nameAndRelease = document.createElement("div");
     nameAndRelease.classList.add("nameAndRelease");
@@ -43,8 +85,3 @@ export async function displayMoviesList(container, fetchDataFunction) {
     return movieImg;
   });
 }
-async function hey(params) {
-  const trailer = await displayMoviesList();
-  console.log(trailer);
-}
-hey()

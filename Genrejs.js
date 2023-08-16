@@ -1,4 +1,8 @@
 const nextprivios = document.getElementById("nextprivios");
+const holeOfGenre = document.getElementById("dropdown-content");
+import { genreMovie } from "./api.js";
+import { displayGenreMovie as displayGenreMovie1 } from "./genreDisplay.js";
+
 async function fetchDataFunction(id) {
   if (!id) {
     return;
@@ -15,9 +19,10 @@ async function fetchDataFunction(id) {
   }
 }
 
-async function displayPokemonDetails() {
+async function displayGenreDetails() {
   const searchParams = new URLSearchParams(window.location.search);
   const genreName = searchParams.get("id");
+ 
   const container = document.getElementById("holeOfGenre");
 
   const moviesData = await fetchDataFunction(genreName);
@@ -27,7 +32,6 @@ async function displayPokemonDetails() {
     const movieImg = document.createElement("img");
     movieImg.classList.add("card-img-top1");
     const imgURL = `https://www.themoviedb.org/t/p/w440_and_h660_face/${movie.backdrop_path}`;
-    console.log(movie.backdrop_path);
     if (movie.backdrop_path) {
       movieImg.src = imgURL;
     } else {
@@ -60,7 +64,7 @@ async function displayPokemonDetails() {
   });
 }
 
-displayPokemonDetails();
+displayGenreDetails();
 async function genreMovie2() {
   try {
     const response = await fetch(
@@ -86,3 +90,4 @@ async function displayGenreMovie(container, fetchDataFunction) {
   });
 }
 displayGenreMovie(nextprivios, genreMovie2);
+displayGenreMovie1(holeOfGenre, genreMovie);

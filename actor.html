@@ -29,18 +29,17 @@
         <li><a href="#bookmarked">Bookmarked</a></li>
       </ul>
     </div>
-    <div class="navbar1">
-      <ul class="navbar-links2">
-        <li><a href="#">New Link 1</a></li>
-        <li><a href="#">New Link 2</a></li>
-        <li><a href="#">New Link 3</a></li>
+    <div class="navbar1" id="navbar1">
+      <ul class="navbar-links2" class="active" href="javascript:void(0)">
+        <li><a href="#Actor" href="javascript:void(0)">Actor</a></li>
+        <li><a href="#Popular Actor" href="javascript:void(0)">Popular Actor</a></li>
         <!-- Add more links as needed -->
       </ul>
     </div>
     <!-- //////////// -->
     <div class="container">
       <div id="nextprivios">
-        <h1>Actor</h1>
+        <h1 id="Actor">Actor</h1>
         <div>
           <i class="bi bi-arrow-bar-left" id="leftButtonTrending"></i>
           <i class="bi bi-arrow-bar-right" id="rightButtonTrending"></i>
@@ -51,7 +50,7 @@
     <!-- //////////// -->
     <div class="container">
       <div id="nextprivios">
-        <h1>Popular Actor</h1>
+        <h1 id="Popular Actor">Popular Actor</h1>
         <div>
           <i class="bi bi-arrow-bar-left" id="leftButtonTrending"></i>
           <i class="bi bi-arrow-bar-right" id="rightButtonTrending"></i>
@@ -62,6 +61,8 @@
   </body>
   <script src="main.js" type="module"></script>
   <script src="actor.js" type="module"></script>
+  <script src="./onscroll.js"></script>
+
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
