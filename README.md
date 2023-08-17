@@ -11,7 +11,7 @@ For project planning and tracking, we are using a Trello board. You can access t
 The IMDB Movie App aims to create an engaging and informative platform for users to explore a vast collection of movies from various genres. With the integration of the TMDB API, the application offers a seamless experience of browsing, searching, and discovering movies. Here's what the app currently offers:
 ## Demo
 
-You can try out the live demo [here](https://moviesapi.com/).
+You can try out the live demo [here](https://skeaz.github.io/JS-Movies-API-Proejct/welcome.html).
 ### Features
 
 1. **Movie Listings**: View a list of movies categorized into popular, top-rated, trending, and now playing.
