@@ -28,40 +28,43 @@ async function getActor2() {
 }
 async function displayMoviesList(container, fetchDataFunction) {
   const moviesData = await fetchDataFunction();
-  moviesData.forEach(async (movie) => {
-    const moviesList = document.createElement("div");
-    moviesList.classList.add("card1");
-    const movieImg = document.createElement("img");
-    movieImg.classList.add("card-img-top1");
-    const imgURL = `https://www.themoviedb.org/t/p/w470_and_h470_face/${movie.profile_path}`;
-    if (movie.profile_path) {
-      movieImg.src = imgURL;
+  moviesData.forEach(async (actor) => {
+    const actorList = document.createElement("div");
+    actorList.classList.add("card2");
+    const actorImg = document.createElement("img");
+    actorImg.classList.add("card-img-top1");
+    const imgURL = `https://www.themoviedb.org/t/p/w470_and_h470_face/${actor.profile_path}`;
+    if (actor.profile_path) {
+      actorImg.src = imgURL;
     } else {
-      movieImg.src = `https://placehold.co/800?text=${movie.original_name}&font=playfair`;
+      actorImg.src = `https://placehold.co/800?text=${actor.original_name}&font=playfair`;
     }
-    movieImg.alt = movie.original_name;
-    movieImg.title = movie.original_name;
+    actorList.addEventListener("click", () => {
+      window.location.href = `/Single%20Actor%20Page/SingleActorPage.html?id=${actor.id}`;
+    });
+    actorImg.alt = actor.original_name;
+    actorImg.title = actor.original_name;
     const cardBody = document.createElement("div");
     const nameAndRelease = document.createElement("div");
     nameAndRelease.classList.add("nameAndRelease");
     cardBody.classList.add("card-body1");
-    const movieTitle = document.createElement("h5");
-    movieTitle.classList.add("card-title1");
-    movieTitle.textContent = movie.name;
-    const movieReleaseDate = document.createElement("h6");
-    movieReleaseDate.classList.add("card-text");
-    movieReleaseDate.innerHTML = movie.known_for_department;
+    const actorTitle = document.createElement("h5");
+    actorTitle.classList.add("card-title1");
+    actorTitle.textContent = actor.name;
+    const known_for_department = document.createElement("h6");
+    known_for_department.classList.add("card-text");
+    known_for_department.innerHTML = actor.known_for_department;
     const voteAverage = document.createElement("h6");
     voteAverage.classList.add("voteAverage");
-    voteAverage.innerHTML = `  ${movie.popularity}`;
-    // console.log(movie);
-    container.appendChild(moviesList);
-    moviesList.appendChild(movieImg);
-    moviesList.appendChild(cardBody);
+    voteAverage.innerHTML = `  ${actor.popularity}`;
+    // console.log(actor);
+    container.appendChild(actorList);
+    actorList.appendChild(actorImg);
+    actorList.appendChild(cardBody);
     cardBody.appendChild(nameAndRelease);
-    nameAndRelease.appendChild(movieTitle);
+    nameAndRelease.appendChild(actorTitle);
     nameAndRelease.appendChild(voteAverage);
-    cardBody.appendChild(movieReleaseDate);
+    cardBody.appendChild(known_for_department);
   });
 }
 displayMoviesList(holeOfActor, getActor);

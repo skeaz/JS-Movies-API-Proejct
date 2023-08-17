@@ -1,10 +1,10 @@
-import { displayMoviesList } from "../movieDisplay.js";
+import { displayMoviesList } from "../wholeJS/movieDisplay.js";
 import {
   getPopularMovies,
   getTopRatedMovies,
   getTrendingMovies,
   getNowPlayingMovies,
-} from "../api.js";
+} from "../wholeJS/api.js";
 
 const holeOfPopular = document.getElementById("holeOfPopular");
 const holeOfTopRated = document.getElementById("holeOfTopRated");

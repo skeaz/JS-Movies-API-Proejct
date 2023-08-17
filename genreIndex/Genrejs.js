@@ -1,6 +1,6 @@
 const nextprivios = document.getElementById("nextprivios");
 const holeOfGenre = document.getElementById("dropdown-content");
-import { genreMovie } from "./api.js";
+import { genreMovie } from "../wholeJS/api.js";
 import { displayGenreMovie as displayGenreMovie1 } from "./genreDisplay.js";
 
 async function fetchDataFunction(id) {
@@ -22,9 +22,7 @@ async function fetchDataFunction(id) {
 async function displayGenreDetails() {
   const searchParams = new URLSearchParams(window.location.search);
   const genreName = searchParams.get("id");
- 
   const container = document.getElementById("holeOfGenre");
-
   const moviesData = await fetchDataFunction(genreName);
   moviesData.forEach(async (movie) => {
     const moviesList = document.createElement("div");
@@ -42,6 +40,9 @@ async function displayGenreDetails() {
     const cardBody = document.createElement("div");
     const nameAndRelease = document.createElement("div");
     nameAndRelease.classList.add("nameAndRelease");
+    nameAndRelease.addEventListener("click", () => {
+      window.location.href = `/Single%20Movie%20Page/SingleMoviePage.html?id=${movie.id}`;
+    });
     cardBody.classList.add("card-body1");
     const movieTitle = document.createElement("h5");
     movieTitle.classList.add("card-title1");

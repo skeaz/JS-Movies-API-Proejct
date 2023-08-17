@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Page</title>
     <link rel="stylesheet" href="../mainIndex/style.css" />
+    <link rel="stylesheet" href="/Single Actor Page/styleSingleActorPage.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div class="navbar" id="HOME">
@@ -28,66 +30,15 @@
         <li><a href="../aboutIndex/About.html" target="_blank">About</a></li>
         <li><a href="#bookmarked">Bookmarked</a></li>
       </ul>
-      <div id="searchDiv">
-        <label for="search" style="color: white"> SEARCH </label>
-        <input type="text" id="search" />
-      </div>
     </div>
     <!-- ////////// -->
-    <div class="navbar1" id="navbar1">
-      <ul class="navbar-links2" class="active" href="javascript:void(0)">
-        <li><a href="#HOME" href="javascript:void(0)" id="HOME1">HOME</a></li>
-        <li>
-          <a href="#new=Popular" href="javascript:void(0)" id="Popular1"
-            >Popular</a
-          >
-        </li>
-        <li>
-          <a href="#new=Top Rated" href="javascript:void(0)" id="Top Rated1"
-            >Top Rated</a
-          >
-        </li>
-        <li>
-          <a href="#Trending" href="javascript:void(0)" id="Trending1"
-            >Trending</a
-          >
-        </li>
-        <li>
-          <a href="#Now Playing" href="javascript:void(0)" id="Now Playing1"
-            >Now Playing</a
-          >
-        </li>
-      </ul>
-       
-    </div>
+
     <!-- ////////// -->
-    <div class="container" id="Popular">
-      <div id="nextprivios">
-        <a href="#"><h1>Popular</h1></a>
-      </div>
-      <div id="holeOfPopular"></div>
-    </div>
+    <div class="container" id="content"></div>
+    <div id="mySidenav" class="sidenav"></div>
+
     <!-- ////////// -->
-    <div class="container" id="Top Rated">
-      <div id="nextprivios">
-        <a href="#"> <h1>Top Rated</h1> </a>
-      </div>
-      <div id="holeOfTopRated"></div>
-    </div>
-    <!-- ////////// -->
-    <div class="container" id="Trending">
-      <div id="nextprivios">
-        <a href="#"><h1>Trending</h1></a>
-      </div>
-      <div id="holeOfTrending"></div>
-    </div>
-    <!-- ////////// -->
-    <div class="container" id="Now Playing">
-      <div id="nextprivios">
-        <a href="#"><h1>Now Playing</h1></a>
-      </div>
-      <div id="holeOfNowPlaying"></div>
-    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
@@ -95,9 +46,9 @@
           <div class="col-md-4">
             <h3>Main Pages</h3>
             <ul class="footer-links">
-              <li><a href="/main.html">Home</a></li>
-              <li><a href="/actor.html">Actor</a></li>
-              <li><a href="/About.html" target="_blank">About</a></li>
+              <li><a href="../mainIndex/main.html">Home</a></li>
+              <li><a href="../actorIndex/actor.html">Actor</a></li>
+              <li><a href="../aboutIndex/About.html" target="_blank">About</a></li>
               <li><a href="#bookmarked">Bookmarked</a></li>
             </ul>
           </div>
@@ -132,10 +83,9 @@
       </div>
     </footer>
   </body>
-  <script src="justone.js" type="module"></script>
+  <!-- <script src="../main.js" type="module"></script> -->
   <script src="../genreIndex/Genrejs.js" type="module"></script>
-  <script src="../wholeJS/onscroll.js"></script>
-  <script src="../search/search.js"></script>
+  <script src="./SingleActorPagejavascript.js" type="module"></script>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
